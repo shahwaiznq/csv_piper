@@ -60,7 +60,7 @@ module CsvPiper
 
     def csv
       @csv ||= begin
-        csv_object = CSV.new(io, csv_options)
+        csv_object = CSV.new(io, **csv_options)
         csv_object.readline # Read headers through
         csv_object
       end
